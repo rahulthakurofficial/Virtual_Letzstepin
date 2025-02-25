@@ -1,0 +1,268 @@
+// @import "../../App.scss";
+
+// .navbar {
+//     height: auto;
+//     padding: 10px;
+    
+//     .wrapper {
+//         max-width: 966px;
+//         margin: auto;
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         flex-wrap: wrap; 
+
+//         @include mobile {
+//             justify-content: center;
+//             padding: 15px;
+//         }
+
+//         span {
+//             font-weight: bold;
+
+//             @include mobile {
+//                 display: none;
+//             }
+//         }
+
+//         .social {
+//             display: flex;
+//             gap: 10px;
+//             flex-wrap: wrap;
+
+//             img {
+//                 width: 20px;
+//                 height: 20px;
+//                 border-radius: 50%;
+//             }
+//         }
+//     }
+// }
+
+// .navbar-wrapper {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+//     padding: 10px 20px;
+//     flex-wrap: wrap; 
+// }
+
+// .navbar-logo {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+// .navbar-search-location,
+// .navbar-main-search {
+//     display: flex;
+//     align-items: center;
+//     border: 2px solid #ccc;
+//     border-radius: 5px;
+//     overflow: hidden;
+//     width: 100%;
+//     max-width: 300px;
+//     margin: 5px; 
+// }
+
+// .search-input {
+//     padding: 5px;
+//     border: none;
+//     outline: none;
+//     flex-grow: 1;
+//     font-size: 14px;
+//     color: #333;
+//     background-color: black; 
+//     border-radius: 4px;
+
+//     &:focus {
+//         background-color: #e6f7ff;
+//         border-color: #00bcd4;
+//     }
+// }
+
+// .search-btn {
+//     background-color: transparent;
+//     border: none;
+//     padding: 10px;
+//     cursor: pointer;
+// }
+
+// .icon {
+//     color: #00bcd4;
+// }
+
+// .navbar-search-location {
+//     margin-right: 10px;
+// }
+
+// .navbar-main-search {
+//     margin-left: 10px;
+// }
+
+// @media (max-width: 768px) {
+//     .navbar-wrapper {
+//         flex-direction: column;
+//         align-items: center;
+//         padding: 10px;
+//     }
+
+//     .navbar-search-location,
+//     .navbar-main-search {
+//         width: 90%;
+//         max-width: none;
+//         margin: 5px 0 ;
+//     }
+//     .navbar-search-location {
+//         width: 90%;
+//         max-width: none;
+//         margin: 25px 0 5px 0; 
+//     }
+
+//     .wrapper {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     .social {
+//         justify-content: center;
+//         margin-top: 10px;
+//     }
+// }
+
+
+
+
+@import "../../App.scss";
+
+.navbar {
+    height: auto;
+    padding: 10px;
+    
+    .wrapper {
+        max-width: 966px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; 
+
+        @include mobile {
+            justify-content: center;
+            padding: 15px;
+        }
+
+        span {
+            font-weight: bold;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        .social {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+
+            img {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    flex-wrap: wrap; 
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-search-location,
+.navbar-main-search {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 300px;
+    margin: 5px; 
+}
+
+.search-input {
+    padding: 5px;
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 14px;
+    color: #333;
+    background-color: black; 
+    border-radius: 4px;
+
+    &:focus {
+        background-color: #e6f7ff;
+        border-color: #00bcd4;
+    }
+}
+
+.search-btn {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.icon {
+    color: #00bcd4;
+}
+
+.navbar-search-location {
+    margin-right: 10px;
+}
+
+.navbar-main-search {
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar-search-location,
+    .navbar-main-search {
+        width: 90%;
+        max-width: none;
+        margin: 5px 0 ;
+    }
+    .navbar-search-location {
+        width: 90%;
+        max-width: none;
+        margin: 25px 0 5px 0; 
+    }
+
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,167 @@
+@import "../../App.scss";
+
+.services {
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px;
+
+    @include mobile { padding: 20px; }
+
+    .textContainer {
+        flex: 1;
+        align-self: flex-end;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-align: right;
+
+        @include mobile {
+            align-self: center;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        hr {
+            width: 250px;
+            border: none;
+            border-top: 0.5px solid grey;
+
+            @include mobile { width: 80%; }
+        }
+    }
+
+    .titleContainer {
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @include mobile { width: 100%; }
+
+        .title {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            @include mobile {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            img {
+                width: 180px;
+                height: 100px;
+                border-radius: 50px;
+                object-fit: cover;
+
+                @include mobile {
+                    width: 100px;
+                    height: 50px;
+                }
+            }
+
+            h1 {
+                font-size: 36px;
+                font-weight: 100;
+                letter-spacing: 1px;
+
+                @include mobile { font-size: 20px; }
+            }
+
+            button {
+                width: 180px;
+                height: 50px;
+                border-radius: 25px;
+                background-color: orange;
+                border: none;
+                font-size: 18px;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                @include mobile {
+                    width: 120px;
+                    height: 40px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .listContainer {
+        flex: 2;
+        display: flex;
+        max-width: 966px;
+        margin: auto;
+        gap: 20px;
+        flex-wrap: wrap;  // Ensure items wrap on smaller screens
+
+        @include tablet {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .box {
+            flex: 1;
+            padding: 20px;
+            border: 0.5px solid gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+            min-width: 280px;  // Ensures box does not shrink too much
+
+            @include tablet { width: 90%; }
+            @include mobile { 
+                border: none;
+                align-items: center;
+                gap: 15px;
+                padding: 10px;
+                width: 100%; 
+            }
+
+            h2 {
+                font-size: 20px;
+                @include mobile { font-size: 18px; }
+            }
+
+            p {
+                font-size: 14px;
+                @include mobile { font-size: 12px; }
+            }
+
+            button {
+                padding: 10px;
+                background-color: orange;
+                border: none;
+                cursor: pointer;
+                transition: 0.3s ease;
+
+                @include mobile {
+                    background-color: transparent;
+                    border: 1px solid orange;
+                    border-radius: 5px;
+                    color: orange;
+                    width: 50%;
+                    padding: 5px;
+                }
+
+                &:hover {
+                    background-color: darkorange;
+                    color: white;
+                }
+            }
+        }
+    }
+}

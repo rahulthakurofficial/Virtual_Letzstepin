@@ -1,0 +1,98 @@
+@import "../../App.scss";
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footer {
+    background-color: #0c0c1d;
+    color: #fff;
+    padding: 40px 0 20px; 
+    position: relative;
+    overflow: hidden; 
+    height: auto;
+
+    .footer-section {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        gap: 20px;
+
+        @include tablet {
+            flex-wrap: wrap; 
+            justify-content: center;
+            text-align: center;
+            gap: 30px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+        }
+
+        & > div {
+            flex: 1;
+            padding: 0 20px;
+            
+            @include tablet {
+                flex: 1 1 45%; 
+            }
+
+            @include mobile {
+                flex: 1 1 100%; 
+                padding: 0 10px;
+            }
+
+            h3 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 1.6;
+            }
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+
+                li {
+                    margin: 10px 0;
+
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 14px;
+                        transition: color 0.3s ease;
+
+                        &:hover {
+                            color: #ff6347;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        font-size: 14px;
+
+        @include tablet {
+            font-size: 13px;
+            padding-top: 15px;
+        }
+
+        @include mobile {
+            font-size: 12px;
+            padding-top: 10px;
+        }
+    }
+}
