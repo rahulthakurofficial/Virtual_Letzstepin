@@ -60,7 +60,9 @@ const Contact = () => {
                         <input type="text" name="city" placeholder="City" />
                         <input type="text" name="business" placeholder="Business" />
                         <input type="number" name="contactNo" placeholder="Contact No." min="0" />
-                    </div>
+                        <input type="number" name="contactNo" placeholder="Contact No." min="0" />
+                        
+                    </div>git 
                     <div className="messageGroup">
                         <textarea name="message" rows={8} required placeholder="Message"></textarea>
                         <button type="submit">Submit</button>
