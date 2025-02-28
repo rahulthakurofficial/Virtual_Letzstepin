@@ -61,6 +61,7 @@ const Contact = () => {
                         <input type="text" name="business" placeholder="Business" />
                         <input type="number" name="contactNo" placeholder="Contact No." min="0" />
                         <input type="number" name="contactNo" placeholder="Contact No." min="0" />
+                        <input type="number" name="contactNo" placeholder="Contact No." min="0" />
                         
                     </div> 
                     <div className="messageGroup">
