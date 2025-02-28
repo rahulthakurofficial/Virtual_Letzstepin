@@ -62,7 +62,7 @@ const Contact = () => {
                         <input type="number" name="contactNo" placeholder="Contact No." min="0" />
                         <input type="number" name="contactNo" placeholder="Contact No." min="0" />
                         
-                    </div>git 
+                    </div> 
                     <div className="messageGroup">
                         <textarea name="message" rows={8} required placeholder="Message"></textarea>
                         <button type="submit">Submit</button>
