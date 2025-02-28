@@ -49,7 +49,7 @@ const Contact = () => {
                 <motion.h1 variants={variants}>Let's Connect</motion.h1>
                 <motion.div className="item" variants={variants}><h2>Mail</h2><span>grow@letzstepin.com</span></motion.div>
                 <motion.div className="item" variants={variants}><h2>Address</h2><span>Pune</span></motion.div>
-                <motion.div className="item" variants={variants}><h2>Phone</h2><span>8761928727</span></motion.div>
+                <motion.div className="item" variants={variants}><h2>Phone</h2><span>+91+ 8799919578</span></motion.div>
             </motion.div>
 
             <div className="formContainer">
@@ -59,10 +59,7 @@ const Contact = () => {
                         <input type="email" name="email" required placeholder="Email" />
                         <input type="text" name="city" placeholder="City" />
                         <input type="text" name="business" placeholder="Business" />
-                        <input type="number" name="contactNo" placeholder="Contact No." min="0" />
-                        <input type="number" name="contactNo" placeholder="Contact No." min="0" />
-                        
-                        
+                        <input type="number" name="contactNo" placeholder="Contact No." min="0" /> 
                     </div> 
                     <div className="messageGroup">
                         <textarea name="message" rows={8} required placeholder="Message"></textarea>

@@ -1,18 +1,25 @@
 @import "../../App.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); // Importing Poppins font
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; // Applying the new font
+}
+
+.about-us {
+    margin-left: 45px;
 }
 
 .footer {
     background-color: #0c0c1d;
     color: #fff;
-    padding: 40px 0 20px; 
+    padding: 40px 0 20px;
     position: relative;
-    overflow: hidden; 
+    overflow: hidden;
     height: auto;
 
     .footer-section {
@@ -22,7 +29,7 @@
         gap: 20px;
 
         @include tablet {
-            flex-wrap: wrap; 
+            flex-wrap: wrap;
             justify-content: center;
             text-align: center;
             gap: 30px;
@@ -40,22 +47,24 @@
             padding: 0 20px;
             
             @include tablet {
-                flex: 1 1 45%; 
+                flex: 1 1 45%;
             }
 
             @include mobile {
-                flex: 1 1 100%; 
+                flex: 1 1 100%;
                 padding: 0 10px;
             }
 
             h3 {
                 font-size: 18px;
                 margin-bottom: 15px;
+                font-weight: 600; // Making headings slightly bolder
             }
 
             p {
                 font-size: 14px;
                 line-height: 1.6;
+                font-weight: 400; // Ensuring good readability
             }
 
             ul {

@@ -1,6 +1,6 @@
-import React, { useState, useRef } from 'react';
-import { useScroll, useSpring, motion } from 'framer-motion';
-import { FaArrowsAltH } from "react-icons/fa"; 
+import React, { useState, useRef } from "react";
+import { motion } from "framer-motion";
+import { FaArrowsAltH, FaTag } from "react-icons/fa";
 import "./TwoD_Staging.scss";
 
 function TwoD_Staging() {
@@ -19,14 +19,22 @@ function TwoD_Staging() {
     });
   };
 
-  const beforeImages = [ "/flat.avif", "/flat.avif", "/flat3.avif", "/flat.avif"];
-  const afterImages = ["/flat2.avif", "/flat2.avif", "/flat4.avif","/flat2.avif"];
+  const beforeImages = [ "/flat.avif", "/flat3.avif", "/flat.avif"];
+  const afterImages = [ "/flat2.avif", "/flat4.avif", "/flat2.avif"];
+  const prices = ["10k", "20k", "30k", "40k"];
 
   return (
-    <div>
-      <h2 style={{ textAlign: "center", marginTop: "90px" }}>
+    <div className="twoD-container">
+      {/* Heading */}
+      <motion.h1
+        className="photo-staging-heading"
+        style={{ textAlign: "center", marginTop: "90px" }}
+        whileHover={{ color: "orange", scale: 1.1 }}
+      >
         2D Photo Virtual Staging
-      </h2>
+      </motion.h1>
+
+      {/* Image Slider Section */}
       <div className="virtual-staging-container">
         <section className="image-slider">
           <div className="slider-container">
@@ -38,17 +46,33 @@ function TwoD_Staging() {
                   ref={sliderRefs[index % 3]}
                   onMouseMove={(e) => handleMouseMove(e, index % 3)}
                 >
+                  {/* Before Image */}
                   <img src={before} className="before-image" alt={`Before ${index + 1}`} />
+
+                  {/* After Image */}
                   <img
                     src={afterImages[index % afterImages.length]}
                     className="after-image"
                     alt={`After ${index + 1}`}
                     style={{ clipPath: `inset(0 ${100 - sliderPositions[index % 3]}% 0 0)` }}
                   />
+
                   {/* Slide Icon */}
                   <div className="slide-icon">
                     <FaArrowsAltH />
                   </div>
+
+                  {/* Price Tag */}
+                  <motion.div
+                    className="price-tag"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <FaTag className="tag-icon" />
+                    {prices[index % prices.length]}
+                  </motion.div>
                 </div>
               ))}
             </div>

@@ -38,7 +38,7 @@ const Single = ({item})=>{
                             src={item.src} 
                             width="100%" 
                             height="500px" 
-                            style={{ border: "none" }} 
+                            style={{ border: "2px solid white ", borderRadius: "15px",overflow: "hidden"  }} 
                             allowFullScreen
                         ></iframe>
 

@@ -1,120 +1,17 @@
-
-
-// @import "../../App.scss";
-
-// .contact {
-//     height: 100%;
-//     max-width: 966px;
-//     margin: auto;
-//     display: flex;
-//     align-items: center;
-//     gap: 50px;
-
-//     @include mobile {
-//         width: 100%;
-//         padding: 10px;
-//         flex-direction: column;
-//     }
-
-//     .textContainer {
-//         flex: 1;
-//         display: flex;
-//         flex-direction: column;
-//         gap: 40px;
-
-//         @include mobile {
-//             gap: 20px;
-//             text-align: center;
-//         }
-
-//         h1 {
-//             font-size: 50px;
-//             line-height: 88px;
-
-//             @include mobile {
-//                 font-size: 36px;
-//             }
-//         }
-
-//         span {
-//             font-weight: 300;
-//         }
-//     }
-
-//     .formContainer {
-//         flex: 1;
-//         position: relative;
-//         background-color: rgba(255, 255, 255, 0.1);
-//         padding: 30px;
-//         border-radius: 10px;
-
-//         @include mobile {
-//             width: 100%;
-//             padding: 20px;
-//         }
-
-//         form {
-//             display: flex;
-//             gap: 20px;
-//             justify-content: space-between;
-
-//             @include mobile {
-//                 flex-direction: column;
-//             }
-
-//             .formGroup, .messageGroup {
-//                 display: flex;
-//                 flex-direction: column;
-//                 gap: 15px;
-//                 flex: 1;
-//             }
-
-//             input,
-//             textarea {
-//                 padding: 15px;
-//                 background-color: transparent;
-//                 border: 1px solid white;
-//                 color: white;
-//                 border-radius: 5px;
-//                 width: 100%;
-                
-//                 @include mobile {
-//                     padding: 10px;
-//                 }
-//             }
-
-//             button {
-//                 background-color: orange;
-//                 cursor: pointer;
-//                 font-weight: 500;
-//                 padding: 15px;
-//                 border: none;
-//                 border-radius: 5px;
-//                 transition: 0.3s;
-                
-//                 &:hover {
-//                     background-color: darkorange;
-//                 }
-
-//                 @include mobile {
-//                     padding: 10px;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-
 @import "../../App.scss";
 
 .contact {
-    height: 100%;
-    max-width: 966px;
+    
+    height: auto;
+    max-width: 900px;
     margin: auto;
     display: flex;
     align-items: center;
-    gap: 50px;
-    padding: 40px; // Added padding for better spacing
+    gap: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, #1e1e2f, #2c2c44);
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 
     @include tablet {
         flex-direction: column;
@@ -133,131 +30,98 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 20px;
 
         @include tablet {
-            text-align: center;
-            gap: 30px;
-        }
-
-        @include mobile {
-            gap: 20px;
             text-align: center;
         }
 
         h1 {
             font-size: 50px;
-            line-height: 88px;
-
-            @include tablet {
-                font-size: 40px;
-                line-height: 70px;
-            }
-
-            @include mobile {
-                font-size: 32px;
-                line-height: 50px;
-            }
+            font-weight: bold;
+            color: white;
+            text-shadow: 3px 3px 12px rgba(255, 255, 255, 0.2);
         }
 
-        span {
-            font-weight: 300;
-            font-size: 18px;
+        .item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
 
-            @include tablet {
-                font-size: 16px;
+            h2 {
+                font-size: 22px;
+                font-weight: bold;
+                color: #ff9800;
             }
 
-            @include mobile {
-                font-size: 14px;
+            span {
+                font-size: 18px;
+                color: #f0f0f0;
+                font-weight: 300;
             }
         }
     }
 
     .formContainer {
         flex: 1;
-        position: relative;
-        background-color: rgba(255, 255, 255, 0.1);
-        padding: 30px;
-        border-radius: 10px;
-        width: 100%; // Ensuring proper width
-
-        @include tablet {
-            padding: 25px;
-        }
-
-        @include mobile {
-            width: 100%;
-            padding: 20px;
-        }
+        background: rgba(255, 255, 255, 0.05);
+        padding: 25px;
+        border-radius: 15px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+        width: 100%;
 
         form {
             display: flex;
-            gap: 20px;
-            justify-content: space-between;
-            flex-wrap: wrap;
-
-            @include tablet {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            @include mobile {
-                flex-direction: column;
-                gap: 15px;
-            }
+            flex-direction: column;
+            gap: 15px;
 
             .formGroup, .messageGroup {
                 display: flex;
                 flex-direction: column;
-                gap: 15px;
-                flex: 1;
-                width: 100%;
+                gap: 10px;
             }
 
             input,
             textarea {
-                padding: 15px;
-                background-color: transparent;
-                border: 1px solid white;
+                padding: 12px;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.3);
                 color: white;
-                border-radius: 5px;
-                width: 100%;
-                font-size: 16px;
+                border-radius: 8px;
+                font-size: 15px;
+                transition: 0.3s;
+                box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.1);
 
-                @include tablet {
-                    padding: 12px;
-                    font-size: 14px;
-                }
-
-                @include mobile {
-                    padding: 10px;
-                    font-size: 14px;
+                &:focus {
+                    border-color: #ff9800;
+                    box-shadow: 0px 0px 10px rgba(255, 152, 0, 0.8);
+                    outline: none;
+                    transform: scale(1.02);
                 }
             }
 
             button {
-                background-color: orange;
+                background: linear-gradient(135deg, #ff9800, #ff5722);
                 cursor: pointer;
-                font-weight: 500;
-                padding: 15px;
+                font-weight: 600;
+                padding: 12px;
                 border: none;
-                border-radius: 5px;
-                transition: 0.3s;
-                font-size: 16px;
+                border-radius: 8px;
+                color: white;
+                font-size: 15px;
+                transition: all 0.3s ease;
+                box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.5);
 
                 &:hover {
-                    background-color: darkorange;
+                    background: linear-gradient(135deg, #ff5722, #ff9800);
+                    transform: translateY(-3px);
+                    box-shadow: 0px 6px 15px rgba(255, 87, 34, 0.6);
                 }
 
-                @include tablet {
-                    padding: 12px;
-                    font-size: 14px;
-                }
-
-                @include mobile {
-                    padding: 10px;
-                    font-size: 14px;
+                &:active {
+                    transform: translateY(1px);
+                    box-shadow: 0px 2px 6px rgba(255, 87, 34, 0.4);
                 }
             }
         }
