@@ -1,5 +1,5 @@
 @import "../../App.scss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); // Importing Poppins font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); 
 
 *,
 *::before,
@@ -7,11 +7,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; // Applying the new font
+  font-family: 'Poppins', sans-serif; 
 }
 
 .about-us {
-    margin-left: 45px;
+    margin-left: 100px;
 }
 
 .footer {
@@ -58,13 +58,13 @@
             h3 {
                 font-size: 18px;
                 margin-bottom: 15px;
-                font-weight: 600; // Making headings slightly bolder
+                font-weight: 600; 
             }
 
             p {
                 font-size: 14px;
                 line-height: 1.6;
-                font-weight: 400; // Ensuring good readability
+                font-weight: 400; 
             }
 
             ul {
@@ -93,6 +93,7 @@
         text-align: center;
         padding-top: 20px;
         font-size: 14px;
+        margin-bottom: 10px;
 
         @include tablet {
             font-size: 13px;
@@ -105,3 +106,51 @@
         }
     }
 }
+
+.discount-box {
+    background-color: #a685e2;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 1200px;
+    height: 360px;
+    margin: 0 auto;
+
+    .discount-heading {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .discount-text {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .email-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+
+      .email-input {
+        padding: 10px;
+        width: 250px;
+        border-radius: 5px 0 0 5px;
+        border: none;
+        outline: none;
+      }
+
+      .email-button {
+        background-color: black;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: #333;
+        }
+      }
+    }
+  }

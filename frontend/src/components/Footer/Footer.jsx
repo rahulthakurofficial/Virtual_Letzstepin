@@ -32,11 +32,24 @@ const Footer = () => {
             <li><a href="#">UI/UX Design</a></li>
             <li><a href="#">SEO Optimization</a></li>
             <li><a href="#">Digital Marketing</a></li>
+
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
         <p>&copy; 2025 LetzStepIn. All Rights Reserved.</p>
+      </div>
+      <div className="discount-box">
+        <h2 className="discount-heading">Get discounts instantly</h2>
+        <p className="discount-text">
+          To save, you just have to log in to your account and look for the
+          experiences with the green or yellow color code. On your first
+          reservation, you can enjoy a <strong>10% discount</strong>.
+        </p>
+        <div className="email-box">
+          <input type="email" placeholder="Enter your email" className="email-input" />
+          <button className="email-button">Get started</button>
+        </div>
       </div>
     </footer>
   );
