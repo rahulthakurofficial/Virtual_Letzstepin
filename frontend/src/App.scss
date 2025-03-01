@@ -20,6 +20,7 @@ section{
     width: auto;
     scroll-snap-align: center;
 }
+
 a{
     text-decoration: none;
     color: inherit;
@@ -39,4 +40,9 @@ a{
     @media(max-width:1366px){
         @content;
     }
+}
+
+html {
+    scroll-snap-type: y proximity;
+    scroll-behavior: smooth;
 }

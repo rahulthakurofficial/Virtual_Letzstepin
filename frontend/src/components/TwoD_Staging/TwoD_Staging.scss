@@ -2,11 +2,12 @@
 
 .virtual-staging-container {
     padding: 40px;
-    // background-color: #0c0c1d;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-
+    justify-content: center;
+    background-color: #0c0c1d;
+    
     @include mobile {
         padding: 20px;
     }
@@ -14,20 +15,19 @@
 
 .photo-staging-heading {
     text-align: center;
-    margin-top: 90px;
-    position: relative;
-    padding-bottom: 10px;
+    margin-top: 50px;
     font-size: 2.5rem;
     color: white;
     font-weight: bold;
-    // text-transform: uppercase;
+    position: relative;
+    padding-bottom: 10px;
     
     &::after {
         content: "";
         display: block;
-        width: 350px;
+        width: 250px;
         height: 3px;
-        background-color: hsl(0, 9%, 86%);
+        background-color: #e6e6e6;
         margin: 10px auto 0;
     }
 }
@@ -35,125 +35,97 @@
 .image-slider {
     width: 100%;
     overflow-x: auto;
-    white-space: nowrap;
-    scrollbar-width: none;
     display: flex;
     justify-content: center;
-    height: auto !important;
-    overflow: hidden;
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-
-    @include tablet {
-        white-space: normal; 
-        flex-wrap: wrap;
-    }
-
-    @include mobile {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-.slider-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center;
     flex-wrap: wrap;
+    padding: 20px 0;
 }
 
 .slider-wrapper {
     display: flex;
-    gap: 25px;
-    padding: 10px;
-    flex-wrap: nowwrap;
-
-    @include mobile {
-        gap: 10px;
-        justify-content: center;
-    }
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-box {
     position: relative;
-    width: 400px;
-    height: 250px;
-    border-radius: 15px;
+    width: 350px;
+    height: 220px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 4px 5px 4px white;
+    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
     transition: transform 0.3s ease-in-out;
     background: #ddd;
     border: 2px solid white;
 
     @include tablet {
-        width: 220px; 
+        width: 250px;
         height: 160px;
     }
 
     @include mobile {
-        width: 180px; 
-        height: 140px;
+        width: 180px;
+        height: 120px;
     }
 
     &:hover {
         transform: scale(1.05);
     }
+}
 
-    .before-image, .after-image {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: clip-path 0.5s ease-in-out;
+.before-image, .after-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: clip-path 0.5s ease-in-out;
+}
+
+.image-box:hover .after-image {
+    clip-path: inset(0 0 0 0);
+}
+
+.slide-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    background: rgba(185, 21, 21, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+
+    @include mobile {
+        font-size: 20px;
+        padding: 8px;
     }
 
-    &:hover .after-image {
-        clip-path: inset(0 0 0 0);
-    }
-
-    /* Slide Icon Styling */
-    .slide-icon {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 24px;
-        background: rgba(185, 21, 21, 0.5);
-        padding: 10px;
-        border-radius: 50%;
-        opacity: 0.8;
-        transition: opacity 0.3s;
-
-        @include mobile {
-            font-size: 20px;
-            padding: 8px;
-        }
-
-        &:hover {
-            opacity: 1;
-        }
+    &:hover {
+        opacity: 1;
     }
 }
 
-/* Price Tag */
 .price-tag {
     position: absolute;
-    bottom: 15px;
-    right: 15px;
+    bottom: 10px;
+    right: 10px;
     color: white;
     font-size: 1rem;
     font-weight: bold;
-    padding: 8px 12px;
-    border-radius: 12px;
+    padding: 6px 10px;
+    border-radius: 8px;
     backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     gap: 5px;
     transition: transform 0.3s ease-in-out;
-    
+
     .tag-icon {
         color: gold;
     }
