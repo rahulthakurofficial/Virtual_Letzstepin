@@ -50,7 +50,7 @@ const Hero = () => {
                 opulence with India's foremost 360° tour & CGI expert, revitalizing your digital experience.</motion.h4>
                 <motion.div className="buttons" variants={textVariants}>
                     <motion.button variants={textVariants}>See what we have done</motion.button>
-                    <motion.button variants={textVariants}>Contact me</motion.button>
+                    <motion.button variants={textVariants}>Contact us</motion.button>
                 </motion.div>
                 <motion.img src="/scroll.png" alt="" variants={textVariants} animate="scrollButton"/>
             </motion.div>

@@ -5,16 +5,14 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-section">
-        <div className="about-us">
+        <div className="footer-column">
           <h3>LetzStepIn</h3>
           <p>
-            LetzStepIn is a forward-thinking company that helps you bring your
-            ideas to life. We specialize in delivering innovative solutions to
-            transform your vision into reality. Whether it's web development,
-            digital marketing, or creative services, we have got you covered.
+            LetzStepIn is a forward-thinking company that helps you bring your ideas to life. 
+            We specialize in delivering innovative solutions to transform your vision into reality.
           </p>
         </div>
-        <div className="useful-links">
+        <div className="footer-column">
           <h3>Useful Links</h3>
           <ul>
             <li><a href="#">Home</a></li>
@@ -24,7 +22,7 @@ const Footer = () => {
             <li><a href="#">Portfolio</a></li>
           </ul>
         </div>
-        <div className="our-services">
+        <div className="footer-column">
           <h3>Our Services</h3>
           <ul>
             <li><a href="#">Web Development</a></li>
@@ -32,13 +30,10 @@ const Footer = () => {
             <li><a href="#">UI/UX Design</a></li>
             <li><a href="#">SEO Optimization</a></li>
             <li><a href="#">Digital Marketing</a></li>
-
           </ul>
         </div>
       </div>
-      <div className="footer-bottom">
-        <p>&copy; 2025 LetzStepIn. All Rights Reserved.</p>
-      </div>
+      
       <div className="discount-box">
         <h2 className="discount-heading">Get discounts instantly</h2>
         <p className="discount-text">
@@ -50,6 +45,9 @@ const Footer = () => {
           <input type="email" placeholder="Enter your email" className="email-input" />
           <button className="email-button">Get started</button>
         </div>
+      </div>
+      <div className="footer-bottom">
+        <p>&copy; 2025 LetzStepIn. All Rights Reserved.</p>
       </div>
     </footer>
   );

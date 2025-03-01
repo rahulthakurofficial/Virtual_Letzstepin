@@ -1,5 +1,4 @@
-@import "../../App.scss";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 *,
 *::before,
@@ -7,150 +6,159 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Poppins', sans-serif;
 }
 
-.about-us {
-    margin-left: 100px;
+body {
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; // Ensures content pushes the footer down
 }
 
 .footer {
-    background-color: #0c0c1d;
-    color: #fff;
-    padding: 40px 0 20px;
-    position: relative;
-    overflow: hidden;
-    height: auto;
+  background-color: #0c0c1d;
+  color: #fff;
+  padding: 40px 20px;
+  position: relative;
+  width: 100%;
+  text-align: center;
 
-    .footer-section {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 20px;
-        gap: 20px;
-
-        @include tablet {
-            flex-wrap: wrap;
-            justify-content: center;
-            text-align: center;
-            gap: 30px;
-        }
-
-        @include mobile {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 20px;
-        }
-
-        & > div {
-            flex: 1;
-            padding: 0 20px;
-            
-            @include tablet {
-                flex: 1 1 45%;
-            }
-
-            @include mobile {
-                flex: 1 1 100%;
-                padding: 0 10px;
-            }
-
-            h3 {
-                font-size: 18px;
-                margin-bottom: 15px;
-                font-weight: 600; 
-            }
-
-            p {
-                font-size: 14px;
-                line-height: 1.6;
-                font-weight: 400; 
-            }
-
-            ul {
-                list-style-type: none;
-                padding: 0;
-
-                li {
-                    margin: 10px 0;
-
-                    a {
-                        text-decoration: none;
-                        color: #fff;
-                        font-size: 14px;
-                        transition: color 0.3s ease;
-
-                        &:hover {
-                            color: #ff6347;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    .footer-bottom {
-        text-align: center;
-        padding-top: 20px;
-        font-size: 14px;
-        margin-bottom: 10px;
-
-        @include tablet {
-            font-size: 13px;
-            padding-top: 15px;
-        }
-
-        @include mobile {
-            font-size: 12px;
-            padding-top: 10px;
-        }
-    }
-}
-
-.discount-box {
-    background-color: #a685e2;
-    padding: 30px;
-    border-radius: 10px;
+  .footer-section  {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     max-width: 1200px;
-    height: 360px;
-    margin: 0 auto;
+    margin: auto;
+    gap: 20px;
 
-    .discount-heading {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+    .footer-column {
+      flex: 1;
+      min-width: 250px;
+      padding: 10px;
 
-    .discount-text {
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .email-box {
-      display: flex;
-      justify-content: center;
-      margin-top: 10px;
-
-      .email-input {
-        padding: 10px;
-        width: 250px;
-        border-radius: 5px 0 0 5px;
-        border: none;
-        outline: none;
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
       }
 
-      .email-button {
-        background-color: black;
-        color: white;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 0 5px 5px 0;
-        cursor: pointer;
-        transition: 0.3s;
+      p {
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 400;
+      }
 
-        &:hover {
-          background-color: #333;
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin: 10px 0;
+          
+
+          a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: #ff6347;
+            }
+          }
         }
       }
     }
   }
+
+  .footer-bottom {
+    margin-top: 0px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+  }
+}
+
+// Discount Box Styling
+.discount-box {
+  background-color: #a685e2;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+  .discount-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .discount-text {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .email-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+
+    .email-input {
+      padding: 12px;
+      width: 250px;
+      border-radius: 5px 0 0 5px;
+      border: none;
+      outline: none;
+    }
+
+    .email-button {
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .footer-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .discount-box {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .email-box {
+    flex-direction: column;
+    
+    .email-input {
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .email-button {
+      border-radius: 5px;
+      width: 100%;
+    }
+  }
+}
