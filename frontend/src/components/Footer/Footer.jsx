@@ -6,9 +6,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-section">
         <div className="footer-column">
-          <h3>LetzStepIn</h3>
+          <h3>VR </h3>
           <p>
-            LetzStepIn is a forward-thinking company that helps you bring your ideas to life. 
+             is a forward-thinking company that helps you bring your ideas to life. 
             We specialize in delivering innovative solutions to transform your vision into reality.
           </p>
         </div>

@@ -54,7 +54,7 @@ const Hero = () => {
                 </motion.div>
                 <motion.img src="/scroll.png" alt="" variants={textVariants} animate="scrollButton"/>
             </motion.div>
-            </div>
+        </div>
             <motion.div className="slidingTextContainer" variants={sliderVariants} initial="initial" animate="animate">
                 VIRTUAL REALITY
             </motion.div>

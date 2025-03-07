@@ -47,8 +47,8 @@ const Contact = () => {
         <motion.div className="contact" variants={variants} initial="initial" whileInView="animate">
             <motion.div className="textContainer" variants={variants}>
                 <motion.h1 variants={variants}>Let's Connect</motion.h1>
-                <motion.div className="item" variants={variants}><h2>Mail</h2><span>grow@letzstepin.com</span></motion.div>
-                <motion.div className="item" variants={variants}><h2>Address</h2><span>Pune</span></motion.div>
+                <motion.div className="item" variants={variants}><h2>Mail</h2><span>enter email id</span></motion.div>
+                <motion.div className="item" variants={variants}><h2>Address</h2><span>Arunachal</span></motion.div>
                 <motion.div className="item" variants={variants}><h2>Phone</h2><span>+91+ 8799919578</span></motion.div>
             </motion.div>
 
