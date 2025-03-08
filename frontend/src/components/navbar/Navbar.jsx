@@ -19,7 +19,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="navbar-logo">
-          {/* <img src="/logoLetzstepin.png" alt="Logo" style={{ height: 'px', width: '130px' }} /> */}
+          <img src="/logoLetzstepin.png" alt="Logo" style={{ height: 'px', width: '130px' }} />
         </div>
         {/* <LocationPermission /> */}
       </div>
