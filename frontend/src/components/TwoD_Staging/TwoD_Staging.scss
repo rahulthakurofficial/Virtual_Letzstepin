@@ -134,3 +134,18 @@
         transform: scale(1.1);
     }
 }
+.twoD-container {
+    border: 3px solid white;  // सफेद बॉर्डर
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #0c0c1d;
+    margin: 30px auto;
+    max-width: 1200px;
+
+    @include mobile {
+        padding: 5px;
+        border-width: 2px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
