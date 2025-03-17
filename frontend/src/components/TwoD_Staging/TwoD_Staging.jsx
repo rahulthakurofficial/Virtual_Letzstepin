@@ -19,8 +19,8 @@ function TwoD_Staging() {
     });
   };
 
-  const beforeImages = [ "/flat.avif", "/flat3.avif", "/flat.avif","/flat.avif"];
-  const afterImages = [ "/flat2.avif", "/flat4.avif", "/flat2.avif", "/flat2.avif"];
+  const beforeImages = [ "/flat1.webp", "/flat21.jpg", "/flat31.jpg","/flat41.jpg"];
+  const afterImages = [ "/flat5.jpg", "/flat6.jpg", "/flat7.jpg", "/flat8.jpg"];
   
   const prices = ["10k", "20k", "30k", "40k"];
 
