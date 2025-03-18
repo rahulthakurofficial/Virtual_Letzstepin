@@ -83,10 +83,15 @@ const Project = () => {
         <h1>Tailored Services for Virtual Properties</h1>
         {!isMobile && <motion.div style={{ scaleX }} className="progressBar"></motion.div>}
       </div> */}
-      <div className="progress" style={{   width: "100%", background: "#0c0c1d", zIndex: 1000 }}>
-  <h1>Tailored Services for Virtual Properties</h1>
-  {!isMobile && <motion.div style={{ scaleX }} className="progressBar"></motion.div>}
-</div>
+      <div
+        className="progress"
+        style={{ width: "100%", background: "#0c0c1d", zIndex: 1000 }}
+      >
+        <h1>Tailored Services for Virtual Properties</h1>
+        {!isMobile && (
+          <motion.div style={{ scaleX }} className="progressBar"></motion.div>
+        )}
+      </div>
 
       {items.map((item) => (
         <Single item={item} key={item.id} />
