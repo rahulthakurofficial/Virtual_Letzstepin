@@ -4,12 +4,12 @@ import { FaArrowsAltH, FaTag } from "react-icons/fa";
 import "./TwoD_Staging.scss";
 
 function TwoD_Staging() {
-  const [sliderPositions, setSliderPositions] = useState([50, 50, 50]);
-  const sliderRefs = [useRef(null), useRef(null), useRef(null)];
+  const [sliderPositions, setSliderPositions] = useState([50, 50, 50, 50]); // 4 elements ke liye update
+  const sliderRefs = useRef([]);
 
   const handleMouseMove = (e, index) => {
-    if (!sliderRefs[index].current) return;
-    const rect = sliderRefs[index].current.getBoundingClientRect();
+    if (!sliderRefs.current[index]) return;
+    const rect = sliderRefs.current[index].getBoundingClientRect();
     const yPos = ((e.clientX - rect.left) / rect.width) * 100;
 
     setSliderPositions((prevPositions) => {
@@ -19,14 +19,12 @@ function TwoD_Staging() {
     });
   };
 
-  const beforeImages = [ "/flat1.webp", "/flat21.jpg", "/flat31.jpg","/flat41.jpg"];
+  const beforeImages = [ "/flat1.webp", "/flat21.jpg", "/flat31.jpg", "/flat41.jpg"];
   const afterImages = [ "/flat5.jpg", "/flat6.jpg", "/flat7.jpg", "/flat8.jpg"];
-  
   const prices = ["10k", "20k", "30k", "40k"];
 
   return (
     <div className="twoD-container">
-      {/* Heading */}
       <motion.h1
         className="photo-staging-heading"
         style={{ textAlign: "center", marginTop: "90px" }}
@@ -35,7 +33,6 @@ function TwoD_Staging() {
         2D Photo Virtual Staging
       </motion.h1>
 
-      {/* Image Slider Section */}
       <div className="virtual-staging-container">
         <section className="image-slider">
           <div className="slider-container">
@@ -44,18 +41,18 @@ function TwoD_Staging() {
                 <div
                   key={index}
                   className="image-box"
-                  ref={sliderRefs[index % 3]}
-                  onMouseMove={(e) => handleMouseMove(e, index % 3)}
+                  ref={(el) => (sliderRefs.current[index] = el)} // Correctly assign ref to each box
+                  onMouseMove={(e) => handleMouseMove(e, index)}
                 >
                   {/* Before Image */}
                   <img src={before} className="before-image" alt={`Before ${index + 1}`} />
 
                   {/* After Image */}
                   <img
-                    src={afterImages[index % afterImages.length]}
+                    src={afterImages[index]}
                     className="after-image"
                     alt={`After ${index + 1}`}
-                    style={{ clipPath: `inset(0 ${100 - sliderPositions[index % 3]}% 0 0)` }}
+                    style={{ clipPath: `inset(0 ${100 - sliderPositions[index]}% 0 0)` }}
                   />
 
                   {/* Slide Icon */}
@@ -72,7 +69,7 @@ function TwoD_Staging() {
                     transition={{ duration: 0.3 }}
                   >
                     <FaTag className="tag-icon" />
-                    {prices[index % prices.length]}
+                    {prices[index]}
                   </motion.div>
                 </div>
               ))}

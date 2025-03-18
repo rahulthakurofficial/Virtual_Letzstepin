@@ -52,8 +52,8 @@
 
 .image-box {
     position: relative;
-    width: 350px;
-    height: 220px;
+    width: 500px;
+    height: 250px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 5px 10px rgba(255, 255, 255, 0.2);
@@ -62,13 +62,13 @@
     border: 2px solid white;
 
     @include tablet {
-        width: 250px;
+        width: 400px;
         height: 160px;
     }
 
     @include mobile {
-        width: 180px;
-        height: 120px;
+        width: 270px;
+        height: 180px;
     }
 
     &:hover {
