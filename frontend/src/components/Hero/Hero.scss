@@ -11,6 +11,8 @@
         max-width: 966px;
         margin: auto;
         height: 100%;
+       
+        
         
 
         .textContainer{
@@ -73,7 +75,8 @@
         position: absolute;
         top: 0;
         right: 0;
-        overflow: hidden;
+       // overflow: hidden;
+     //  margin-left: 200px;
 
         img{
             height: 90vh;

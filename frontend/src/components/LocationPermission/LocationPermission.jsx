@@ -46,17 +46,7 @@ const LocationPermission = () => {
         </div>
       )}
 
-      {/* <div className="location-info">
-        {location ? (
-          <p>
-            📍 Your Location: <strong>Latitude:</strong> {location.lat}, <strong>Longitude:</strong> {location.lng}
-          </p>
-        ) : error ? (
-          <p className="error-text">⚠️ {error}</p>
-        ) : (
-          <p>Waiting for location permission...</p>
-        )}
-      </div> */}
+      
     </div>
   );
 };

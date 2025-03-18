@@ -2,7 +2,7 @@ import Sidebar from "../sidebar/Sidebar";
 import "./Navbar.scss";
 import { motion } from "framer-motion";
 import { FaMapMarkerAlt, FaSearch } from "react-icons/fa";
-import LocationPermission from "../LocationPermission/LocationPermission";
+// import LocationPermission from "../LocationPermission/LocationPermission";
 
 const Navbar = () => {
   return (
@@ -15,7 +15,7 @@ const Navbar = () => {
           animate={{ opacity: 1, scale: 1 }} 
           transition={{ duration: 0.5 }}
         ></motion.span>
-         <LocationPermission />
+         {/* <LocationPermission /> */}
 
         {/* Logo */}
         <div className="navbar-logo">
