@@ -1,62 +1,61 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "DM Sans",sans-serif;
-}
-* {
+    font-family: "DM Sans", sans-serif;
     user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
 }
 
-
-
-
-body{
+body {
     background-color: #0c0c1d;
-    color:lightgray;
+    color: lightgray;
 }
-html{
-    scroll-snap-type: y mandatory;
-    scroll-behavior:smooth;
+
+html {
+    scroll-snap-type: y proximity; // Choose between "mandatory" or "proximity"
+    scroll-behavior: smooth;
+    overflow-y: scroll;
 }
-section{
+
+section {
     height: 100vh;
     width: auto;
     scroll-snap-align: center;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-@mixin mobile{
-    @media(max-width:738px){
-        @content;
-    }
-}
-@mixin tablet{
-    @media(max-width:1024px){
-        @content;
-    }
-}
-@mixin desktop{
-    @media(max-width:1366px){
+// Responsive Mixins
+@mixin mobile {
+    @media (max-width: 738px) {
         @content;
     }
 }
 
-html {
-    scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
 }
 
+@mixin desktop {
+    @media (max-width: 1366px) {
+        @content;
+    }
+}
 
-// @media (max-width: 1024px), (max-height: 768px) {
-//     body {
-//         display: none !important;
-//     }
-// }
+// Example Usage of Mixins
+.container {
+    width: 90%;
+    margin: auto;
+
+    @include mobile {
+        width: 100%;
+    }
+}

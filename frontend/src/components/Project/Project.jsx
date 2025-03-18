@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./Project.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
@@ -28,17 +28,18 @@ const Single = ({ item }) => {
   const { scrollYProgress } = useScroll({ target: ref });
 
   const y = useTransform(scrollYProgress, [0, 1], [-50, 0]);
+
   return (
     <section ref={ref}>
       <div className="container">
         <div className="wrapper">
-          <div className="imageContainer" ref={ref}>
+          <div className="imageContainer">
             <iframe
               src={item.src}
               width="100%"
               height="500px"
               style={{
-                border: "2px solid white ",
+                border: "2px solid white",
                 borderRadius: "15px",
                 overflow: "hidden",
               }}
@@ -57,6 +58,15 @@ const Single = ({ item }) => {
 
 const Project = () => {
   const ref = useRef();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 480);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["end end", "start start"],
@@ -66,12 +76,18 @@ const Project = () => {
     stiffness: 100,
     damping: 30,
   });
+
   return (
     <div className="project" ref={ref}>
-      <div className="progress">
+      {/* <div className="progress">
         <h1>Tailored Services for Virtual Properties</h1>
-        <motion.div style={{ scaleX }} className="progressBar"></motion.div>
-      </div>
+        {!isMobile && <motion.div style={{ scaleX }} className="progressBar"></motion.div>}
+      </div> */}
+      <div className="progress" style={{   width: "100%", background: "#0c0c1d", zIndex: 1000 }}>
+  <h1>Tailored Services for Virtual Properties</h1>
+  {!isMobile && <motion.div style={{ scaleX }} className="progressBar"></motion.div>}
+</div>
+
       {items.map((item) => (
         <Single item={item} key={item.id} />
       ))}
