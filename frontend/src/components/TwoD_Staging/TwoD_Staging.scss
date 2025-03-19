@@ -337,3 +337,44 @@
         height: 300px;
     }
 }
+.price-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px; /* Ensure same margin for all */
+    margin-left: 107px;
+}
+
+/* Common Styles for Price and Buy Now Button */
+.price-tag, .buy-now-btn {
+    width: 160px;  
+    height: 50px;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0; /* Ensure no extra margin */
+    padding: 10px;
+}
+
+/* Hover Effect */
+.price-tag:hover, .buy-now-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg, #ff512f, #dd2476);
+    cursor: pointer;
+}
+
+/* Remove default button styling */
+.buy-now-btn {
+    border: none;
+    cursor: pointer;
+}
