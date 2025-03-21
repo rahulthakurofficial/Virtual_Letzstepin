@@ -7,7 +7,7 @@ import Navbar from "./components/navbar/Navbar";
 import Project from "./components/Project/Project";
 import Services from "./components/Services/Services";
 import TwoD_Staging from "./components/TwoD_Staging/TwoD_Staging";
-import Experience from "./components/Experience/Experience";
+// import Experience from "./components/Experience/Experience";
 
 const App = () => {
   // useEffect(() => {
