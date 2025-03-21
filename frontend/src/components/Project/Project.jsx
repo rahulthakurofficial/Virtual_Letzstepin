@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { FaShoppingCart } from "react-icons/fa";
 import "./Project.scss";
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 
@@ -45,6 +46,11 @@ const Single = ({ item }) => {
               }}
               allowFullScreen
             ></iframe>
+            <div className="buy-now-container">
+              <button className="buy-now-btn">
+                <FaShoppingCart className="cart-icon" /> Buy Now
+              </button>
+            </div>
           </div>
           <motion.div className="textContainer" style={{ y }}>
             <h2>{item.title}</h2>
@@ -79,10 +85,7 @@ const Project = () => {
 
   return (
     <div className="project" ref={ref}>
-      {/* <div className="progress">
-        <h1>Tailored Services for Virtual Properties</h1>
-        {!isMobile && <motion.div style={{ scaleX }} className="progressBar"></motion.div>}
-      </div> */}
+     
       <div
         className="progress"
         style={{ width: "100%", background: "#0c0c1d", zIndex: 1000 }}

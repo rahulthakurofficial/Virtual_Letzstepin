@@ -235,3 +235,40 @@
     }
 }
 
+.imageContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align button to left */
+  }
+  
+  .buy-now-container {
+    margin-top: 10px; 
+    margin-left: 240px;/* Space between iframe and button */
+  }
+  
+  .buy-now-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(180deg, #ffb600, #ff8c00);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(255, 140, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .buy-now-btn:hover {
+    background: linear-gradient(180deg, #ff8c00, #ff6a00);
+    transform: scale(1.05);
+  }
+  
+  .cart-icon {
+    font-size: 18px;
+  }
+  
